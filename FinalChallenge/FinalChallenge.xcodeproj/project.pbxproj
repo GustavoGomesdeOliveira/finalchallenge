@@ -15,6 +15,8 @@
 		0697E1761EAE2ABF002AF2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0697E1741EAE2ABF002AF2FF /* LaunchScreen.storyboard */; };
 		0697E1811EAE2AC0002AF2FF /* FinalChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697E1801EAE2AC0002AF2FF /* FinalChallengeTests.swift */; };
 		0697E18C1EAE2AC0002AF2FF /* FinalChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697E18B1EAE2AC0002AF2FF /* FinalChallengeUITests.swift */; };
+		A7FBED271EAE36B8004264CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBED261EAE36B8004264CF /* ProfileViewController.swift */; };
+		A7FBED291EAE36C5004264CF /* FinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBED281EAE36C5004264CF /* FinderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0697E1871EAE2AC0002AF2FF /* FinalChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0697E18B1EAE2AC0002AF2FF /* FinalChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalChallengeUITests.swift; sourceTree = "<group>"; };
 		0697E18D1EAE2AC0002AF2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FBED261EAE36B8004264CF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A7FBED281EAE36C5004264CF /* FinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				0697E1681EAE2ABF002AF2FF /* AppDelegate.swift */,
 				0697E16A1EAE2ABF002AF2FF /* ViewController.swift */,
+				A7FBED2A1EAE36CC004264CF /* TabBarViewControllers */,
 				0697E16C1EAE2ABF002AF2FF /* Main.storyboard */,
 				0697E1721EAE2ABF002AF2FF /* Assets.xcassets */,
 				0697E1741EAE2ABF002AF2FF /* LaunchScreen.storyboard */,
@@ -126,6 +131,15 @@
 				0697E18D1EAE2AC0002AF2FF /* Info.plist */,
 			);
 			path = FinalChallengeUITests;
+			sourceTree = "<group>";
+		};
+		A7FBED2A1EAE36CC004264CF /* TabBarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBED281EAE36C5004264CF /* FinderViewController.swift */,
+				A7FBED261EAE36B8004264CF /* ProfileViewController.swift */,
+			);
+			name = TabBarViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +281,8 @@
 			files = (
 				0697E16B1EAE2ABF002AF2FF /* ViewController.swift in Sources */,
 				0697E1691EAE2ABF002AF2FF /* AppDelegate.swift in Sources */,
+				A7FBED271EAE36B8004264CF /* ProfileViewController.swift in Sources */,
+				A7FBED291EAE36C5004264CF /* FinderViewController.swift in Sources */,
 				0697E1711EAE2ABF002AF2FF /* FinalChallenge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +534,7 @@
 				0697E1921EAE2AC0002AF2FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0697E1931EAE2AC0002AF2FF /* Build configuration list for PBXNativeTarget "FinalChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +543,7 @@
 				0697E1951EAE2AC0002AF2FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0697E1961EAE2AC0002AF2FF /* Build configuration list for PBXNativeTarget "FinalChallengeUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +552,7 @@
 				0697E1981EAE2AC0002AF2FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
