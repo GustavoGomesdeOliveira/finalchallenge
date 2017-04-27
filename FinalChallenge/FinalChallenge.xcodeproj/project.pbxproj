@@ -15,6 +15,10 @@
 		0697E1761EAE2ABF002AF2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0697E1741EAE2ABF002AF2FF /* LaunchScreen.storyboard */; };
 		0697E1811EAE2AC0002AF2FF /* FinalChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697E1801EAE2AC0002AF2FF /* FinalChallengeTests.swift */; };
 		0697E18C1EAE2AC0002AF2FF /* FinalChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697E18B1EAE2AC0002AF2FF /* FinalChallengeUITests.swift */; };
+		06F800061EB21BA2008FB503 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F800021EB21BA2008FB503 /* Bolts.framework */; };
+		06F800071EB21BA2008FB503 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F800031EB21BA2008FB503 /* FBSDKCoreKit.framework */; };
+		06F800081EB21BA2008FB503 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F800041EB21BA2008FB503 /* FBSDKLoginKit.framework */; };
+		06F800091EB21BA2008FB503 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F800051EB21BA2008FB503 /* FBSDKShareKit.framework */; };
 		A7FBED271EAE36B8004264CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBED261EAE36B8004264CF /* ProfileViewController.swift */; };
 		A7FBED291EAE36C5004264CF /* FinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBED281EAE36C5004264CF /* FinderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,10 @@
 		0697E1871EAE2AC0002AF2FF /* FinalChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0697E18B1EAE2AC0002AF2FF /* FinalChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalChallengeUITests.swift; sourceTree = "<group>"; };
 		0697E18D1EAE2AC0002AF2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F800021EB21BA2008FB503 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		06F800031EB21BA2008FB503 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		06F800041EB21BA2008FB503 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		06F800051EB21BA2008FB503 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		A7FBED261EAE36B8004264CF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A7FBED281EAE36C5004264CF /* FinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F800091EB21BA2008FB503 /* FBSDKShareKit.framework in Frameworks */,
+				06F800061EB21BA2008FB503 /* Bolts.framework in Frameworks */,
+				06F800071EB21BA2008FB503 /* FBSDKCoreKit.framework in Frameworks */,
+				06F800081EB21BA2008FB503 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 		0697E15C1EAE2ABF002AF2FF = {
 			isa = PBXGroup;
 			children = (
+				06F800011EB21B83008FB503 /* Frameworks */,
 				0697E1671EAE2ABF002AF2FF /* FinalChallenge */,
 				0697E17F1EAE2AC0002AF2FF /* FinalChallengeTests */,
 				0697E18A1EAE2AC0002AF2FF /* FinalChallengeUITests */,
@@ -131,6 +144,17 @@
 				0697E18D1EAE2AC0002AF2FF /* Info.plist */,
 			);
 			path = FinalChallengeUITests;
+			sourceTree = "<group>";
+		};
+		06F800011EB21B83008FB503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06F800021EB21BA2008FB503 /* Bolts.framework */,
+				06F800031EB21BA2008FB503 /* FBSDKCoreKit.framework */,
+				06F800041EB21BA2008FB503 /* FBSDKLoginKit.framework */,
+				06F800051EB21BA2008FB503 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A7FBED2A1EAE36CC004264CF /* TabBarViewControllers */ = {
@@ -436,6 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J5ZWQ2W9CE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gustavo.bepid.FinalChallenge;
@@ -449,6 +477,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J5ZWQ2W9CE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gustavo.bepid.FinalChallenge;
