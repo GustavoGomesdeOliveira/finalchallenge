@@ -7,19 +7,61 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var userName: UITextField!
     
     @IBOutlet weak var password: UITextField!
     
+    @IBOutlet weak var facebookLoginBtn: FBSDKLoginButton!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        facebookLoginBtn.delegate = self
+        facebookLoginBtn.readPermissions = ["public_profile", "email", "user_friends"]
+        
+        if let token = FBSDKAccessToken.current(){
+            
+            fetchProfile()
+            performSegue(withIdentifier: "segue", sender: nil)
+
+        }
+        
+    }
+    
+    func fetchProfile(){
+        
+        let parameters = ["fields" : "email, first_name, last_name, picture.type(large), gender"]
+        
+        FBSDKGraphRequest(graphPath: "me", parameters: parameters).start { (connection, result, error) in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+        }
+        
+    }
+
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        performSegue(withIdentifier: "segue", sender: nil)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {
