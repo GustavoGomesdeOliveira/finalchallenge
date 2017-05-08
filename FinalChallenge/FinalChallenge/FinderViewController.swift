@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+
 
 class FinderViewController: UIViewController {
 
@@ -14,6 +16,23 @@ class FinderViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        let token = FBSDKAccessToken.current()
+        
+        
+        
+        
+        FBSDKGraphRequest(graphPath: "/\(token)/friends", parameters: nil).start { (connection, result, error) in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            print(result!)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
